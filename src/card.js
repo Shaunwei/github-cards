@@ -1,3 +1,7 @@
+// Customized with resume links
+var resumeViewLink = "https://github.com/Shaunwei/toy-land/blob/master/XiaoWei_ResumeCS.pdf";
+var resumeDownloadLink = "https://github.com/Shaunwei/toy-land/raw/master/XiaoWei_ResumeCS.pdf"
+
 function querystring() {
   var href = window.location.href, kv;
   var params = href.slice(href.indexOf('?') + 1).split('&');
@@ -132,7 +136,9 @@ var qs = querystring();
         } else {
           link = data.html_url;
         }
-        job = '<a href="' + link + '">Available for hire.</a>';
+        job = '<a href="' + link + '">Available for hire|;</a>';
+        job = job + '<a href="' + resumeViewLink + '">View Resume|</a>';
+        job = job + '<a href="' + resumeDownloadLink + '">Download Resume</a>';
       }
       if (message) {
         job = message;
